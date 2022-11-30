@@ -1,14 +1,15 @@
 import { FC } from "react";
 import Layout from "../../components/layout";
 
+
 type Props = {
-  onChangePage: (page: string) => void;
+  onChangePage: (value: string) => void;
 };
-const Login: FC<Props> = (props) => {
-  const { onChangePage } = props;
+const Login: FC<Props> = ({onChangePage}) => {
   return (
     <div className="login">
-      <Layout onChangePage={onChangePage} />
+      <Layout onChangePage={onChangePage}>
+      </Layout>
     </div>
   );
 };

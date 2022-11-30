@@ -12,19 +12,19 @@ import { useState } from "react";
 function App() {
   const [page, setPage] = useState("Login");
 
-  const changePage = (page: string) => {
-    setPage(page);
+  const renderPage = (value: string) => {
+    setPage(value);
   };
   return (
     <>
-      {page === "Login" && <Login onChangePage={changePage} />}
-      {page === "AddCategory" && <AddCategory onChangePage={changePage} />}
-      {page === "AddTask" && <AddTask onChangePage={changePage} />}
-      {page === "Categories" && <Categories onChangePage={changePage} />}
-      {page === "Profile" && <Profile onChangePage={changePage} />}
-      {page === "SignUp" && <SignUp onChangePage={changePage} />}
-      {page === "Tasks" && <Tasks onChangePage={changePage} />}
-      {page === "Dashboard" && <Dashboard onChangePage={changePage} />}
+      {page === "Login" && <Login onChangePage={renderPage} />}
+      {page === "AddCategory" && <AddCategory onChangePage={renderPage} />}
+      {page === "AddTask" && <AddTask onChangePage={renderPage} />}
+      {page === "Categories" && <Categories onChangePage={renderPage} />}
+      {page === "Profile" && <Profile onChangePage={renderPage} />}
+      {page === "SignUp" && <SignUp onChangePage={renderPage} />}
+      {page === "Tasks" && <Tasks onChangePage={renderPage} />}
+      {page === "Dashboard" && <Dashboard onChangePage={renderPage} />}
     </>
   );
 }
